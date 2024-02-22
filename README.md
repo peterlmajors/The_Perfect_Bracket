@@ -1,4 +1,4 @@
-# The_Perfect_Bracket
+# The Perfect Bracket
 
 A feable attempt to accurately predict something with a roughly 1 in 120.2 billion chance of occuring.
 
