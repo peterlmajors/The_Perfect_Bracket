@@ -2,12 +2,11 @@
 import re
 import pandas as pd
 
-def clean_barttovic(year: int):
+def clean_barttovic_trank(df: pd.DataFrame, year: str):
     try:
-        df = pd.read_csv(f'data/barttovic/barttovic_trank_{str(year)}.csv', skiprows=2)
-        
-        # Drop First Few Columns, Contain No Data
-        df.drop(df.columns[:2], axis=1, inplace=True)
+        # Drop First Few Columns and Rows, Column Headers 
+        df.columns = df.iloc[1]
+        df = df.iloc[2:, 1:]
         
         # Remove Rows With "Team" as Row (Headers)
         df = df[~df['Team'].str.contains('Team')] 
@@ -22,8 +21,6 @@ def clean_barttovic(year: int):
             parts = re.split(pattern, s)
             return [part.strip() for part in parts if part][0]
         df['Team'] = df['Team'].apply(lambda x: split_string(x))
-        
-        # TAM C. Christi
         
         # Align Team Names With Those From MDCM Data, Create Team_Season ID
         team_mapping = {'Abilene Christian': 'Abilene Chr','Alabama St.': 'Alabama St','Albany': 'Albany NY','American': 'American Univ','Appalachian St.': 'Appalachian St',
@@ -47,7 +44,7 @@ def clean_barttovic(year: int):
         df['Team'] = df['Team'].replace(team_mapping) 
         df['team_season'] = df['Team'] + "_" + str(year)
         
-        df.to_csv(f'data/barttovic/barttovic_trank_{str(year)}.csv')
+        df.to_csv(f'data/barttovic/trank/barttovic_trank_{str(year)}.csv')
      
     except Exception as e: 
         print("Error Encountered In Data Cleaning. Details: ", e)

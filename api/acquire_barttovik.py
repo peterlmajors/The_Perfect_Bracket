@@ -2,7 +2,6 @@
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
-from datetime import datetime
 
 # Fetches the HTML content from the given URL
 def get_html(url):
@@ -37,7 +36,7 @@ def extract_table_data(table):
     return table_data
 
 # Exports The Tables Present On The Page to .csv
-def export_barttovic(url: str, table_name: str):
+def export_barttovic(url: str):
     html_content = get_html(url)
     if html_content:
         tables = find_all_tables(html_content)
@@ -49,7 +48,7 @@ def export_barttovic(url: str, table_name: str):
             dfs.append(table_df)
             
         df = pd.concat(dfs, ignore_index=True)
-        df.to_csv(f'data/barttovic/{table_name}.csv')
+        return df
     else:
-        print("Script execution failed.")
+        print("Export of barttovic data did not yield table.")
     
