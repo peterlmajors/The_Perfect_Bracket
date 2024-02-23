@@ -24,7 +24,7 @@ print("\nScraping and Cleaning ------------------\n")
 
 for year in years:
     if (f'barttovic_trank_{str(year)}.csv' not in next(walk('data/barttovic/trank'), (None, None, []))[2]) or (year == 2024):
-        scraped_df = export_barttovic(f'https://barttorvik.com/trank.php?year={year}&sort=&top=0&conlimit=All#')
+        scraped_df = export_barttovic(f'https://barttorvik.com/trank.php?year={year}&sort=&top=0&conlimit=All#')[0]
         print(f"Scrape complete for {year} TRank.")
         clean_barttovic_trank(scraped_df, year)
         print(f"Cleaning complete for {year} TRank.\n")
