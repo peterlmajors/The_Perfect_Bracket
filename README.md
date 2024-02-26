@@ -9,7 +9,7 @@ This machine learning model leverages data spanning from 2008 to 2023 to approxi
 Each year, there are 67 games in the single elimination bracket. For each of these games, we will measure our performance pre-game against betting lines and post-game via
 metrics such as Brier score. Scripts and functions are placed into folders and follow the following scructure. </p2>
 
-# How To Use ------------------------------------------------------------------
+# How To Use ----------------------------------------------------------------
 
 * (1) Clone the repository to your local machine and ensure you have all Python packages in the requirements.txt folder.
 * (2) Look through scripts to become familiar with the workflow - going from highest level (Level 0) to lowest level (Level 2) folders.
@@ -18,7 +18,7 @@ metrics such as Brier score. Scripts and functions are placed into folders and f
 * (5) Inspect terminal during runtime to follow progression of the worklow.
 * (6) Once complete, open predictions.csv and performance.csv and profit!
 
-# Top Level Folders -----------------------------------------------------------
+# Top Level Folders ----------------------------------------------------------
                                                                       
 <h2> API: (Level 2) </h2> <p2> Reusable functions for accessing data and saving to local machine. They use BeatifulSoup4 to scrape from [Barttovic](https://barttorvik.com/#),
                 which hosts team and player-level college basketball statistics, as well as [CBB Ref](https://pypi.org/project/CBBpy/) which serves a similar purpose.
