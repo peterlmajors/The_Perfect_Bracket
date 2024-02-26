@@ -19,17 +19,24 @@ metrics such as Brier score. Scripts and functions are placed into folders and f
 * (6) Once complete, open <b> predictions.csv </b> and <b> performance.csv </b> and profit!
 
 # Top Level Folders ----------------------------------------------------------
+
+<h2> Workflow </h2>
                                                                       
-<b> API: (Level 2) </b> <p2> Reusable functions for accessing data and saving to local machine. They use BeatifulSoup4 to scrape from [Barttovic](https://barttorvik.com/#),
+<b> API (Level 2): </b> <p2> Reusable functions for accessing data and saving to local machine. They use BeatifulSoup4 to scrape from [Barttovic](https://barttorvik.com/#),
                 which hosts team and player-level college basketball statistics, as well as [CBB Ref](https://pypi.org/project/CBBpy/) which serves a similar purpose.
 
 <b> Processing (Level 2): </b> <p2> Reusable functions for completing smaller steps in the data pipeline. These scripts perform variety of tasks, including but not limited to 
                 pulling, cleaning, merging, storing, preprocessing, training, and predicting on the current year's tournament. </p2>
 
-<b> Pipeline: (Level 1) </b> <p2> Each file contains function calls relevant to a larger step in the end-to-end workflow. These scripts call functions in the procesing folder 
+<b> Pipeline: (Level 1): </b> <p2> Each file contains function calls relevant to a larger step in the end-to-end workflow. These scripts call functions in the procesing folder 
                 and themself are called in the main.py script. </p2>
                 
-<b> Main: (Level 0) </b> <p2> Calls the pipeline scripts as subprocesses to run the end-to-end pipeline with maximum visiblity and flexibility. </p2>
+<b> Main: (Level 0): </b> <p2> Calls the pipeline scripts as subprocesses to run the end-to-end pipeline with maximum visiblity and flexibility. </p2>
+
+<h2> Supporting </h2>
 
 <b> Data: </b> <p2> Contains folders for data which must be scraped from barttovic (Trank & Each Team), data which must be downloaded from this public 
               [Kaggle](https://www.kaggle.com/datasets/nishaanamin/march-madness-data) dataset, and data which is already contained in this repository. </p2>
+              
+<b> Exploration: </b> <p2> Jupyter notebooks used to test models and develop code during the development process. Not called by workflow. </p2>
+              
