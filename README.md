@@ -7,7 +7,7 @@ A feable attempt to accurately predict something with a roughly 1 in 120.2 billi
 
 This machine learning model leverages data spanning from 2008 to 2023 to approximate the probability of a team win each possible NCAA 2024 Men's College Basketball game. 
 Each year, there are 67 games in the single elimination bracket. For each of these games, we will measure our performance pre-game against betting lines and post-game via
-metrics such as Brier score. Scripts and functions are placed into folders and follow the following scructure. </p2>
+metrics such as Brier score. Scripts and functions are placed into folders and follow the structure in the 'Workflow' section of Top Level Folders. </p2>
 
 # How To Use ----------------------------------------------------------------
 
