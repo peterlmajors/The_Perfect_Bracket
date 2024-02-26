@@ -4,15 +4,31 @@ A feable attempt to accurately predict something with a roughly 1 in 120.2 billi
 
 # Overview
 
-This machine learning model leverages data spanning from 2008 to 2023 to approximate the probability of each possible 
-NCAA 2024 Men's College Basketball game. Each year, there are 67 games in the single elimination bracket. For each of these
-games, we will measure our performance pre-game against betting lines and post-game via metrics such as Brier score. </p2>
+This machine learning model leverages data spanning from 2008 to 2023 to approximate the probability of a team win each possible NCAA 2024 Men's College Basketball game. 
+Each year, there are 67 games in the single elimination bracket. For each of these games, we will measure our performance pre-game against betting lines and post-game via
+metrics such as Brier score. Scripts and functions are placed into folders and follow the following scructure. </p2>
 
-<h2> API: </h2> <p2> Scripts for accessing data and saving to local machine. This model retrieves data from [Barttovic](https://barttorvik.com/#),
-                which hosts team and player-level college basketball statistics. </p2>
+# Top Level Folders
 
-<h2> Pipeline: </h2> <p2> File contains reusable function calls to complete steps of interest in the data pipeline. These scripts pull, clean, merge, store, 
-                preprocess, train, and predict on the current year's tournament. </p2>
+<h2> API: (Level 2) </h2> <p2> Reusable functions for accessing data and saving to local machine. They use BeatifulSoup4 to scrape from [Barttovic](https://barttorvik.com/#),
+                which hosts team and player-level college basketball statistics, as well as [CBB Ref](https://pypi.org/project/CBBpy/) which serves a similar purpose.
 
-<h2> Processing: </h2> <p2> Each file contains a function relevant to a step in the data pipeline. Functions called by scripts in the pipeline folder. These 
-                scripts are the reusable functions which pipeline scripts call to complete larger blocks of the workflow. </p2>
+<h2> Processing (Level 2): </h2> <p2> Reusable functions for completing smaller steps in the data pipeline. These scripts perform variety of tasks, including but not limited to 
+                pulling, cleaning, merging, storing, preprocessing, training, and predicting on the current year's tournament. </p2>
+
+<h2> Pipeline: (Level 1) </h2> <p2> Each file contains function calls relevant to a larger step in the end-to-end workflow. These scripts call functions in the procesing folder 
+                and themself are called in the main.py script. </p2>
+                
+<h2> Main: (Level 0) </h2> <p2> Calls the pipeline scripts as subprocesses to run the end-to-end pipeline with maximum visiblity and flexibility. </p2>
+
+<h2> Data: (Level 3) </h2> <p2> Contains folders for data which must be scraped from barttovic (Trank & Each Team), data which must be downloaded from this public 
+              [Kaggle](https://www.kaggle.com/datasets/nishaanamin/march-madness-data) dataset, and data which is already contained in this repository. </p2>
+
+# How To Use
+
+<p2> (1) Clone the repository to your local machine and ensure you have all Python packages in the requirements.txt folder. </p2>
+<p2> (2) Look through each of the scripts to become familiar with the workflow - going from highest level (Level 0) to lowest level (Level 2) folders. </p2>
+<p2> (3) Manually download scripts from this [Kaggle](https://www.kaggle.com/datasets/nishaanamin/march-madness-data) dataset, which are listed in kaggle_download.txt. </p2>
+<p2> (4) Run the main.py script to populate and clean barttovic data (if not present) and perform the rest of the workflow (merging, preprocessing, training, predicting). </p2>
+
+
