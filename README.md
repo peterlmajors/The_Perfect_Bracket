@@ -21,14 +21,14 @@ metrics such as Brier score. Scripts and functions are placed into folders and f
                 
 <h2> Main: (Level 0) </h2> <p2> Calls the pipeline scripts as subprocesses to run the end-to-end pipeline with maximum visiblity and flexibility. </p2>
 
-<h2> Data: (Level 3) </h2> <p2> Contains folders for data which must be scraped from barttovic (Trank & Each Team), data which must be downloaded from this public 
+<h2> Data: </h2> <p2> Contains folders for data which must be scraped from barttovic (Trank & Each Team), data which must be downloaded from this public 
               [Kaggle](https://www.kaggle.com/datasets/nishaanamin/march-madness-data) dataset, and data which is already contained in this repository. </p2>
 
 # How To Use
 
-<p2> (1) Clone the repository to your local machine and ensure you have all Python packages in the requirements.txt folder. </p2>
-<p2> (2) Look through each of the scripts to become familiar with the workflow - going from highest level (Level 0) to lowest level (Level 2) folders. </p2>
-<p2> (3) Manually download scripts from this [Kaggle](https://www.kaggle.com/datasets/nishaanamin/march-madness-data) dataset, which are listed in kaggle_download.txt. </p2>
-<p2> (4) Run the main.py script to populate and clean barttovic data (if not present) and perform the rest of the workflow (merging, preprocessing, training, predicting). </p2>
+* (1) Clone the repository to your local machine and ensure you have all Python packages in the requirements.txt folder.
+* (2) Look through each of the scripts to become familiar with the workflow - going from highest level (Level 0) to lowest level (Level 2) folders.
+* (3) Manually download scripts from this [Kaggle](https://www.kaggle.com/datasets/nishaanamin/march-madness-data) dataset, which are listed in kaggle_download.txt.
+* (4) Run the main.py script to populate and clean barttovic data (if not present) and perform the rest of the workflow (merging, preprocessing, training, predicting).
 
 
