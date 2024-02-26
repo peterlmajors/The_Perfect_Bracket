@@ -20,7 +20,7 @@ metrics such as Brier score. Scripts and functions are placed into folders and f
 
 # Top Level Folders ----------------------------------------------------------
                                                                       
-<h2> API: (Level 2) </h2> <p2> Reusable functions for accessing data and saving to local machine. They use BeatifulSoup4 to scrape from [Barttovic](https://barttorvik.com/#),
+<h1> API: (Level 2) </h1> <p2> Reusable functions for accessing data and saving to local machine. They use BeatifulSoup4 to scrape from [Barttovic](https://barttorvik.com/#),
                 which hosts team and player-level college basketball statistics, as well as [CBB Ref](https://pypi.org/project/CBBpy/) which serves a similar purpose.
 
 <h2> Processing (Level 2): </h2> <p2> Reusable functions for completing smaller steps in the data pipeline. These scripts perform variety of tasks, including but not limited to 
