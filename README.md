@@ -11,12 +11,11 @@ metrics such as Brier score. Scripts and functions are placed into folders and f
 
 # How To Use
 
-* (1) Clone the repository to your local machine and ensure you have all Python packages in the requirements.txt folder.
-* (2) Look through scripts to become familiar with the workflow - going from highest level (Level 0) to lowest level (Level 2) folders.
-* (3) Manually download scripts from this [Kaggle](https://www.kaggle.com/datasets/nishaanamin/march-madness-data) dataset, which are listed in kaggle_download.txt.
-* (4) Run the <b> main.py </b> to populate and clean barttovic data and perform remaining necessary steps.
-* (5) Inspect terminal during runtime to follow progression of the worklow.
-* (6) Once complete, open <b> predictions.csv </b> and <b> performance.csv </b> and profit!
+* (1) Clone repository to your local machine and ensure you have all Python packages in the requirements.txt folder.
+* (2) Manually download scripts from this [Kaggle](https://www.kaggle.com/datasets/nishaanamin/march-madness-data) dataset, which are listed in kaggle_download.txt.
+* (3) Run the <b> main.py </b> to populate and clean barttovic data and perform remaining necessary steps.
+* (4) Inspect terminal during runtime to follow progression of the worklow.
+* (5) Once complete, open <b> predictions.csv </b> and <b> performance.csv </b> and profit!
 
 # Top Level Folders
 
