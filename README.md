@@ -2,14 +2,14 @@
 
 A feable attempt to accurately predict something with a roughly 1 in 120.2 billion chance of occuring.
 
-# Overview -------------------------------------------------------------------
+# Overview
                                 
 
 This machine learning model leverages data spanning from 2008 to 2023 to approximate the probability of a team win each possible NCAA 2024 Men's College Basketball game. 
 Each year, there are 67 games in the single elimination bracket. For each of these games, we will measure our performance pre-game against betting lines and post-game via
 metrics such as Brier score. Scripts and functions are placed into folders and follow the structure in the 'Workflow' section of Top Level Folders. </p2>
 
-# How To Use ----------------------------------------------------------------
+# How To Use
 
 * (1) Clone the repository to your local machine and ensure you have all Python packages in the requirements.txt folder.
 * (2) Look through scripts to become familiar with the workflow - going from highest level (Level 0) to lowest level (Level 2) folders.
@@ -18,7 +18,7 @@ metrics such as Brier score. Scripts and functions are placed into folders and f
 * (5) Inspect terminal during runtime to follow progression of the worklow.
 * (6) Once complete, open <b> predictions.csv </b> and <b> performance.csv </b> and profit!
 
-# Top Level Folders ----------------------------------------------------------
+# Top Level Folders
 
 <h2> Workflow </h2>
                                                                       
