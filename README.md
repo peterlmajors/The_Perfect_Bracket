@@ -27,8 +27,7 @@ metrics such as Brier score. Scripts and functions are placed into folders and f
 # How To Use
 
 * (1) Clone the repository to your local machine and ensure you have all Python packages in the requirements.txt folder.
-* (2) Look through each of the scripts to become familiar with the workflow - going from highest level (Level 0) to lowest level (Level 2) folders.
+* (2) Look through scripts to become familiar with the workflow - going from highest level (Level 0) to lowest level (Level 2) folders.
 * (3) Manually download scripts from this [Kaggle](https://www.kaggle.com/datasets/nishaanamin/march-madness-data) dataset, which are listed in kaggle_download.txt.
-* (4) Run the main.py script to populate and clean barttovic data (if not present) and perform the rest of the workflow (merging, preprocessing, training, predicting).
-
-
+* (4) Run the main.py script to populate and clean barttovic data and perform the rest of the model workflow.
+* (5) Inspect the terminal during runtime to examine the progres of the workflow.
