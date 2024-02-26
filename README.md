@@ -16,7 +16,7 @@ metrics such as Brier score. Scripts and functions are placed into folders and f
 * (3) Manually download scripts from this [Kaggle](https://www.kaggle.com/datasets/nishaanamin/march-madness-data) dataset, which are listed in kaggle_download.txt.
 * (4) Run the <b> main.py </b> to populate and clean barttovic data and perform remaining necessary steps.
 * (5) Inspect terminal during runtime to follow progression of the worklow.
-* (6) Once complete, open predictions.csv and performance.csv and profit!
+* (6) Once complete, open <b> predictions.csv </b> and <b> performance.csv </b> and profit!
 
 # Top Level Folders ----------------------------------------------------------
                                                                       
