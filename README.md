@@ -35,7 +35,7 @@ metrics such as Brier score. Scripts and functions are placed into folders and f
 
 <h2> Supporting </h2>
 
-<b> Data: </b> <p2> Contains folders for data which must be scraped from barttovic (Trank & Each Team), data which must be downloaded from this public 
+<b> Data: </b> <p2> Contains folders for data which must be scraped from barttovic (trank & each team), data which must be downloaded from this public 
               [Kaggle](https://www.kaggle.com/datasets/nishaanamin/march-madness-data) dataset, and data which is already contained in this repository. </p2>
               
 <b> Exploration: </b> <p2> Jupyter notebooks used to test models and develop code during the development process. Not called by workflow. </p2>
