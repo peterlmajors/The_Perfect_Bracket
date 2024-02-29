@@ -5,12 +5,24 @@ A feable attempt to accurately predict something with a roughly 1 in 120.2 billi
 # Overview
                                 
 
+<<<<<<< Updated upstream
 This machine learning model leverages data spanning from 2008 to 2023 to approximate the probability of a team win each possible NCAA 2024 Men's College Basketball game. 
 Each year, there are 67 games in the single elimination bracket. For each of these games, we will measure our performance pre-game against betting lines and post-game via
 metrics such as Brier score. Scripts and functions are placed into folders and follow the structure in the 'Workflow' section of Top Level Folders. </p2>
+=======
+This machine learning model leverages data spanning from 2008 to 2023 to approximate the probability of each possible
+NCAA 2024 Men's College Basketball game. Each year, there are 67 games in the single elimination bracket. For each of these
+games, we will measure our performance pre-game against betting lines and other prediction sites. Following each round, we will
+evaluate game via metrics such as Brier score and log loss. </p2>
+
+
+<h2> API: </h2> <p2> Scripts for accessing data and saving to local machine via the cbbdata library in R. This library retrieves advanced statsitics
+                and box scores from Barttovik, ESPN, Kenpom, and various other college baskebtall resources.
+>>>>>>> Stashed changes
 
 # How To Use
 
+<<<<<<< Updated upstream
 * (1) Clone repository to your local machine and ensure you have all Python packages in the requirements.txt folder.
 * (2) Manually download scripts from this [Kaggle](https://www.kaggle.com/datasets/nishaanamin/march-madness-data) dataset, which are listed in kaggle_download.txt.
 * (3) Run the <b> main.py </b> to populate and clean barttovic data and perform remaining necessary steps.
@@ -39,3 +51,7 @@ metrics such as Brier score. Scripts and functions are placed into folders and f
               
 <b> Exploration: </b> <p2> Jupyter notebooks used to test models and develop code during the development process. Not called by workflow. </p2>
               
+=======
+<h2> Processing: </h2> <p2> Each file contains a function relevant to a step in the data pipeline. Functions called by scripts in the pipeline folder. </p2>
+
+>>>>>>> Stashed changes

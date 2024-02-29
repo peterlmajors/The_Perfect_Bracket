@@ -30,10 +30,10 @@ def extract_table_data(table):
     return pd.DataFrame(table_data)
 
 # Exports The Tables Present On The Page to .csv
-def export_barttovic(url: str):
+def export_barttovik(url: str):
     html_content = get_html(url)
     if html_content:
         tables = find_all_tables(html_content)
         return tables
     else:
-        print("Export of barttovic data did not yield table.")
+        print("Export of barttovik data did not yield table.")
