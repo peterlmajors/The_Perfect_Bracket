@@ -1,5 +1,7 @@
+# Load Common Libraries -----------------------------------------------------
+library(tidyverse)
 
-# Install cbbdata (If Installed, Just Load In) -----------------------------
+# Install cbbdata (If Installed, Just Load In) ------------------------------
 if (!requireNamespace("cbbdata", quietly = TRUE)) {
   library(devtools)
   devtools::install_github("andreweatherman/cbbdata")
@@ -10,7 +12,7 @@ if (!requireNamespace("cbbdata", quietly = TRUE)) {
   cat(paste("\nPackage", "cbbdata", "already installed and loaded.\n"))
 }
 
-# Login To cbbdata ---------------------------------------------------------
+# Login To cbbdata ----------------------------------------------------------
 
 # If you don't have a cbd account, uncomment and replace strings with your info.
 # cbbdata::cbd_create_account("USERNAME", "EMAIL", "PASSWORD", "PASSWORD")  # nolint
@@ -18,20 +20,19 @@ if (!requireNamespace("cbbdata", quietly = TRUE)) {
 
 # Once you have an account, login with your credentials stored in .env
 readRenviron(".env")
-cbbdata::cbd_login(sys.getenv("CBD_USER"), ys.getenv("CBD_PW"))
+username <- Sys.getenv("CBD_USER")
+password <- Sys.getenv("CBD_PW")
+cbbdata::cbd_login(username, password)
 
-# Load Common Libraries ----------------------------------------------------
-library(tidyverse)
-
-# Establish Variables ------------------------------------------------------
+# Establish Variables -------------------------------------------------------
 years <- seq(2008, 2024)
 years <- years[years != 2020]
 
-# Define Functions ---------------------------------------------------------
+# Define Functions ----------------------------------------------------------
 
 # Export .csv Files To data/cbbdata Folder
-export_to_data <- function(df, file){
-    folder_path <- file.path("data", "cbbdata")
+export_to_data <- function(df, file, subfolder){
+    folder_path <- file.path("data", "cbbdata", subfolder)
     # Create Folder If Does't Exist and Write To It
     if (!dir.exists(folder_path)) {
         dir.create(folder_path)
@@ -40,7 +41,7 @@ export_to_data <- function(df, file){
     print(paste("Successfully exported to: ", file.path(folder_path, file)))
 }
 
-# Export Conference Factors ------------------------------------------------
+# Export Conference Factors -------------------------------------------------
 
 all_conf_factors <- tibble()
 for (i in years) {
@@ -48,42 +49,47 @@ for (i in years) {
   print(paste("Acquired NCAA Men's Conference Statistcs for", as.character(i)))
   all_conf_factors <- bind_rows(all_conf_factors, year_conf_factors)
 }
-export_to_data(all_conf_factors, file = "conference_factors.csv")
+export_to_data(all_conf_factors, file = "conference_factors.csv", "conference")
 
-# Export Box Scores --------------------------------------------------------
+# Export Box Scores ---------------------------------------------------------
 
-export_to_data(cbbdata::cbd_torvik_game_box(), file = "box_scores.csv")
+export_to_data(cbbdata::cbd_torvik_game_box(), file = "box_scores.csv", "game")
 
-# Export All Metrics -------------------------------------------------------
+# Export Team Ratings By Day -----------------------------------------------
 
-export_to_data(cbbdata::cbd_all_metrics(), file = "all_metrics.csv")
+export_to_data(cbbdata::cbd_torvik_ratings_archive(), file = "team_ratings.csv", 'team')
 
-# Export Current Resume ----------------------------------------------------
+# Export Current Resume -----------------------------------------------------
 
-export_to_data(cbbdata::cbd_torvik_current_resume(), file = "team_resume.csv")
+export_to_data(cbbdata::cbd_torvik_current_resume(), file = "team_resume.csv", "current")
 
-# Export Game Stats --------------------------------------------------------
+# Export Game Stats ---------------------------------------------------------
 
-export_to_data(cbbdata::cbd_torvik_game_stats(), file = "game_stats.csv")
+export_to_data(cbbdata::cbd_torvik_game_stats(), file = "game_stats.csv", "game")
 
-# Export Game Factors ------------------------------------------------------
+# Export Game Factors -------------------------------------------------------
 
-export_to_data(cbbdata::cbd_torvik_game_factors(), file = "game_factors.csv")
+export_to_data(cbbdata::cbd_torvik_game_factors(), file = "game_factors.csv", "game")
 
-# Export BPI Ratings -------------------------------------------------------
+# Export Player Game Peformance ---------------------------------------------
 
-export_to_data(cbbdata::cbd_bpi_ratings(), file = "bpi_ratings.csv")
+export_to_data(cbbdata::cbd_torvik_player_game(), file = "player_game.csv", "player")
 
-# Export Player Game Peformance --------------------------------------------
+# Export Player Season Peformance -------------------------------------------
 
-export_to_data(cbbdata::cbd_torvik_player_game(), file = "player_game.csv")
+export_to_data(cbbdata::cbd_torvik_player_season(), file = "player_season.csv", "player")
 
-# Export Player Game Peformance --------------------------------------------
+# Export Player Game Peformance ---------------------------------------------
 
-export_to_data(cbbdata::cbd_torvik_player_season(), file = "player_season.csv")
+export_to_data(cbbdata::cbd_torvik_player_split(split = 'game_type'), file = "player_split.csv", "player")
 
-# Export NCAA Seeding Comittee Sheets --------------------------------------
+# Export Selection Sunday Resume --------------------------------------------
+
+export_to_data(cbbdata::cbd_torvik_resume_database(n = 1500, min_year = 2008, max_year = 2024, max_net = 80), file = "selection_sunday_resume.csv", "team")
+
+# Export NCAA Seeding Comittee Sheets ---------------------------------------
 # Evaluate Mismatched Seeding Against The Comittee's Own Standards!
+# Official Data Only Exists For 2019, 2021, 2022, and 2023
 
 all_ncaa_sheets <- tibble()
 years <- seq(2019, 2024)
@@ -95,9 +101,9 @@ for (i in years) {
   print(paste("Acquired NCAA Evaluators Sheets for", as.character(i)))
   all_ncaa_sheets <- bind_rows(all_ncaa_sheets, year_ncaa_sheets)
 }
-export_to_data(all_ncaa_sheets, file = "ncaa_sheets.csv")
+export_to_data(all_ncaa_sheets, file = "ncaa_sheets.csv", "ncaa_sheet")
 
-# Export Current Projections -----------------------------------------------
+# Export Current Projections ------------------------------------------------
 # Compare Final Predictions For Men's Bracket To ESPN's, Additional Validation
 
-export_to_data(cbbdata::cbd_bpi_ratings(), file = "current_predictions.csv")
+export_to_data(cbbdata::cbd_bpi_ratings(), file = "current_resume.csv", "current")
