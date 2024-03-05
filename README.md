@@ -10,10 +10,6 @@ NCAA 2024 Men's College Basketball game. Each year, there are 67 games in the si
 games, we will measure our performance pre-game against betting lines and other prediction sites. Following each round, we will
 evaluate game via metrics such as Brier score and log loss. </p2>
 
-
-<h2> API: </h2> <p2> Scripts for accessing data and saving to local machine via the cbbdata library in R. This library retrieves advanced statsitics
-                and box scores from Barttovik, ESPN, Kenpom, and various other college baskebtall resources.
-
 # How To Use
 
 * (1) Clone repo to your local machine and ensure you have all Python packages in the requirements.txt folder.
@@ -27,7 +23,7 @@ evaluate game via metrics such as Brier score and log loss. </p2>
 <h2> Python (.py) Workflow </h2>
                                                                       
 <b> API (Level 2): </b> <p2> Scripts for accessing data and saving to local machine via the cbbdata library in R. This library retrieves advanced statsitics
-                and box scores from Barttovik, ESPN, Kenpom, and various other college baskebtall resources. </p2>
+                and box scores from Barttovik, ESPN, Kenpom, and various college baskebtall resources. </p2>
 
 <b> Processing (Level 2): </b> <p2> Reusable functions for completing smaller steps in the data pipeline. These scripts perform variety of tasks, including 
                 merging, preprocessing, training, and predicting on the current year's tournament data. </p2>
@@ -40,7 +36,7 @@ evaluate game via metrics such as Brier score and log loss. </p2>
 
 <h2> Jupter Notebook (.ipynb) Workflow </h2>
 
-<b> submission.ipynb: </b> <p2> Jupyter notebook script to be uploaded to Kaggle for the 'March Machine Learning Mania 2024' code competition. </p2>
+<b> submission.ipynb: </b> <p2> Jupyter notebook to be uploaded to Kaggle for the 'March Machine Learning Mania 2024' code competition. </p2>
 
 <h2> Supporting Documents </h2>
 
@@ -53,3 +49,6 @@ evaluate game via metrics such as Brier score and log loss. </p2>
 <b> Exploration: </b> <p2> Jupyter notebooks used to test models and develop code during the development process. Not called by workflow. </p2>
 
 <b> Deprecated: </b> <p2> Scripts that were previously used to scrape, clean, and merge barttovik tables manually before being replace by the cbbdata library in R. </p2> 
+
+<b> Supporting: </b> <p2> Submissions gathered from previous March Madness prediction competitions. </p2> 
+
