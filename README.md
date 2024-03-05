@@ -16,7 +16,7 @@ evaluate game via metrics such as Brier score and log loss. </p2>
 
 # How To Use
 
-* (1) Clone repository to your local machine and ensure you have all Python packages in the requirements.txt folder.
+* (1) Clone repo to your local machine and ensure you have all Python packages in the requirements.txt folder.
 * (2) Manually download scripts from this [Kaggle](https://www.kaggle.com/datasets/nishaanamin/march-madness-data) dataset, which are listed in kaggle_download.txt.
 * (3) Run the <b> main.py </b> to populate and clean barttovic data and perform remaining necessary steps.
 * (4) Inspect terminal during runtime to follow progression of the worklow.
