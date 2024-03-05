@@ -31,6 +31,12 @@ evaluate game via metrics such as Brier score and log loss. </p2>
 <b> Pipeline: (Level 1): </b> <p2> Each file contains function calls relevant to a larger step in the end-to-end workflow. These scripts call functions in 
                 the procesing folder and themself are called in the main.py script. This allows for functions to be repurposed for the Men's and Women's 
                 brackets, as well as for their feeder models. </p2>
+
+<b> Exploration: </b> <p2> Jupyter notebooks used to test models and develop code during the development process. Not called by workflow. </p2>
+
+<b> Deprecated: </b> <p2> Scripts that were previously used to scrape, clean, and merge barttovik tables manually before being replace by the cbbdata library in R. </p2> 
+
+<b> Sample: </b> <p2> Submissions gathered from other researchers' March Madness prediction competitions. </p2> 
                 
 <b> Main: (Level 0): </b> <p2> Calls the pipeline scripts as subprocesses to run the end-to-end pipeline with maximum visiblity and flexibility. </p2>
 
@@ -38,17 +44,10 @@ evaluate game via metrics such as Brier score and log loss. </p2>
 
 <b> submission.ipynb: </b> <p2> Jupyter notebook to be uploaded to Kaggle for the 'March Machine Learning Mania 2024' code competition. </p2>
 
-<h2> Supporting Documents </h2>
+<h2> Supporting Documents (.csv) </h2>
 
 <b> Data: </b> <p2> Contains folders for data that is acquired on runtime (cbbdata), must be provided (kaggle, mdcm), and is produced on runtime (pipeline). So long as
                 you have an account with cbbdata (as explained in api/cbbdata.R), you can retreive this data by running main. In the kaggle folder, the march_madness_data
                 can be found at the following [link](https://www.kaggle.com/datasets/nishaanamin/march-madness-data), while the data in march_machine_learning_mania can only
                 be accessed on the competition [page](https://www.kaggle.com/competitions/march-machine-learning-mania-2024). Data in the mdcm folder contains historical 
                 tournament game results and team spellings, and can only be accessed by emailing peterlmajors@gmail.com. The pipeline folder is populated on runtime. </p2>
-              
-<b> Exploration: </b> <p2> Jupyter notebooks used to test models and develop code during the development process. Not called by workflow. </p2>
-
-<b> Deprecated: </b> <p2> Scripts that were previously used to scrape, clean, and merge barttovik tables manually before being replace by the cbbdata library in R. </p2> 
-
-<b> Supporting: </b> <p2> Submissions gathered from previous March Madness prediction competitions. </p2> 
-
