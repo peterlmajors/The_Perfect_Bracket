@@ -4,7 +4,6 @@ A feable attempt to accurately predict something with a roughly 1 in 120.2 billi
 
 # Overview
                                 
-
 This machine learning model leverages data spanning from 2008 to 2023 to approximate the probability of each possible
 NCAA 2024 Men's College Basketball game. Each year, there are 67 games in the single elimination bracket. For each of these
 games, we will measure our performance pre-game against betting lines and other prediction sites. Following each round, we will
@@ -12,13 +11,15 @@ evaluate game via metrics such as Brier score and log loss. </p2>
 
 # How To Use
 
-* (1) Clone repo to your local machine and ensure you have all Python packages in the requirements.txt folder.
+* (1) Clone repo to your local machine and ensure you have all Python packages in requirements.txt.
 * (2) Manually download scripts from this [Kaggle](https://www.kaggle.com/datasets/nishaanamin/march-madness-data) dataset, which are listed in kaggle_download.txt.
 * (3) Run the <b> main.py </b> to populate and clean barttovic data and perform remaining necessary steps.
-* (4) Inspect terminal during runtime to follow progression of the worklow.
+* (4) Inspect terminal during runtime to follow progression of end-to-end workflow.
 * (5) Once complete, open <b> predictions.csv </b> and <b> performance.csv </b> and profit!
 
-# Top Level Folders
+# Top Level Folders and Files
+
+<p2> In this repo, logic is replicated between .py and .ipynb files for Kaggle submissions.
 
 <h2> Python (.py) Workflow </h2>
                                                   
