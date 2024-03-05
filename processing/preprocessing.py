@@ -1,5 +1,6 @@
-
-
+# Import Libraries
+import pandas as pd
+    
 def standard_scale(features, df_train, df_val, df_test=None):    
     mm = MinMaxScaler() 
     
