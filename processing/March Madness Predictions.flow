@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "cells": [
+    {
+      "type": "cs",
+      "input": "assist"
+    },
+    {
+      "type": "cs",
+      "input": "importFiles [ \"C:\\\\Users\\\\Peter\\\\AppData\\\\Local\\\\GitHubDesktop\\\\app-2.9.6\\\\The_Perfect_Bracket\\\\data\\\\pipeline\\\\train.csv\",\"C:\\\\Users\\\\Peter\\\\AppData\\\\Local\\\\GitHubDesktop\\\\app-2.9.6\\\\The_Perfect_Bracket\\\\data\\\\pipeline\\\\test.csv\" ]"
+    },
+    {
+      "type": "cs",
+      "input": "getModels"
+    },
+    {
+      "type": "cs",
+      "input": "buildModel"
+    },
+    {
+      "type": "cs",
+      "input": "runAutoML"
+    }
+  ]
+}
